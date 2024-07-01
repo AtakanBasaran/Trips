@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA112C32D5C5006299D2 /* TripsApp.swift */; };
-		BB6FEA142C32D5C5006299D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA132C32D5C5006299D2 /* ContentView.swift */; };
+		BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA132C32D5C5006299D2 /* LocationView.swift */; };
 		BB6FEA162C32D5C7006299D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FEA152C32D5C7006299D2 /* Assets.xcassets */; };
 		BB6FEA192C32D5C7006299D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */; };
+		BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */; };
+		BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84865D2C32DF74006F1FC9 /* LocationModel.swift */; };
+		BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB6FEA0E2C32D5C5006299D2 /* Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FEA112C32D5C5006299D2 /* TripsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsApp.swift; sourceTree = "<group>"; };
-		BB6FEA132C32D5C5006299D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		BB6FEA152C32D5C7006299D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BB84865D2C32DF74006F1FC9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,11 @@
 			isa = PBXGroup;
 			children = (
 				BB6FEA112C32D5C5006299D2 /* TripsApp.swift */,
-				BB6FEA132C32D5C5006299D2 /* ContentView.swift */,
+				BB6FEA242C32DF44006299D2 /* Model */,
+				BB6FEA1F2C32D5DD006299D2 /* Manager */,
+				BB6FEA212C32D5E6006299D2 /* ViewModel */,
+				BB6FEA202C32D5E2006299D2 /* View */,
+				BB6FEA132C32D5C5006299D2 /* LocationView.swift */,
 				BB6FEA152C32D5C7006299D2 /* Assets.xcassets */,
 				BB6FEA172C32D5C7006299D2 /* Preview Content */,
 			);
@@ -65,6 +75,37 @@
 				BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB6FEA1F2C32D5DD006299D2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		BB6FEA202C32D5E2006299D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB6FEA212C32D5E6006299D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB6FEA242C32DF44006299D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB84865D2C32DF74006F1FC9 /* LocationModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6FEA142C32D5C5006299D2 /* ContentView.swift in Sources */,
+				BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */,
+				BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */,
+				BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */,
+				BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */,
 				BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
