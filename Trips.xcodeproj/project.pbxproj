@@ -14,17 +14,26 @@
 		BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */; };
 		BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84865D2C32DF74006F1FC9 /* LocationModel.swift */; };
 		BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */; };
+		BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486632C330BDB006F1FC9 /* PickLocationView.swift */; };
+		BB8486662C330C79006F1FC9 /* NavigationBarPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */; };
+		BB84866A2C331E05006F1FC9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486692C331E05006F1FC9 /* LocationManager.swift */; };
+		BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB6FEA0E2C32D5C5006299D2 /* Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FEA112C32D5C5006299D2 /* TripsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsApp.swift; sourceTree = "<group>"; };
-		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = ../LocationView.swift; sourceTree = "<group>"; };
 		BB6FEA152C32D5C7006299D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BB84865D2C32DF74006F1FC9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		BB8486632C330BDB006F1FC9 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationView.swift; sourceTree = "<group>"; };
+		BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarPick.swift; path = ../../NavigationBarPick.swift; sourceTree = "<group>"; };
+		BB8486672C3310F7006F1FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BB8486692C331E05006F1FC9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +66,12 @@
 		BB6FEA102C32D5C5006299D2 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
+				BB8486672C3310F7006F1FC9 /* Info.plist */,
 				BB6FEA112C32D5C5006299D2 /* TripsApp.swift */,
 				BB6FEA242C32DF44006299D2 /* Model */,
 				BB6FEA1F2C32D5DD006299D2 /* Manager */,
 				BB6FEA212C32D5E6006299D2 /* ViewModel */,
 				BB6FEA202C32D5E2006299D2 /* View */,
-				BB6FEA132C32D5C5006299D2 /* LocationView.swift */,
 				BB6FEA152C32D5C7006299D2 /* Assets.xcassets */,
 				BB6FEA172C32D5C7006299D2 /* Preview Content */,
 			);
@@ -80,6 +89,7 @@
 		BB6FEA1F2C32D5DD006299D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BB8486692C331E05006F1FC9 /* LocationManager.swift */,
 				BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */,
 			);
 			path = Manager;
@@ -88,6 +98,9 @@
 		BB6FEA202C32D5E2006299D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB8486632C330BDB006F1FC9 /* PickLocationView.swift */,
+				BB6FEA132C32D5C5006299D2 /* LocationView.swift */,
+				BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BB84865D2C32DF74006F1FC9 /* LocationModel.swift */,
+				BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,10 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8486662C330C79006F1FC9 /* NavigationBarPick.swift in Sources */,
 				BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */,
 				BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */,
 				BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */,
+				BB84866A2C331E05006F1FC9 /* LocationManager.swift in Sources */,
 				BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */,
+				BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */,
+				BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */,
 				BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -298,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -319,11 +337,14 @@
 				DEVELOPMENT_TEAM = 27JCDAS664;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trips/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,11 +369,14 @@
 				DEVELOPMENT_TEAM = 27JCDAS664;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trips/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

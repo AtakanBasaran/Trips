@@ -6,12 +6,57 @@
 //
 
 import Foundation
+import CoreLocation
 
 enum APIError: Error {
     case serverError
-    case urlError
     case parseError
     case dataError
+}
+
+enum Places: String {
+    
+    case hotels = "hotels"
+    case attractions = "attractions"
+    case restaurants = "restaurants"
+    case geos = "geos"
+    
+    var category: String {
+        
+        switch self {
+            
+        case .attractions:
+            return "Attractions"
+            
+        case .geos:
+            return "Geos"
+            
+        case .hotels:
+            return "Hotels"
+            
+        case .restaurants:
+            return "Restaurants"
+        }
+    }
+    
+    var systemImage: String {
+        
+        switch self {
+            
+        case .hotels:
+            return "house"
+            
+        case .attractions:
+            return "mountain.2"
+            
+        case .restaurants:
+            return "fork.knife"
+            
+        case .geos:
+            return "globe"
+        }
+    }
+    
 }
 
 final class NetworkManager {
@@ -21,16 +66,16 @@ final class NetworkManager {
     private init() {}
     
     
-    func downloadData() async throws -> LocationModel {
+    func downloadData(coordinate: CLLocationCoordinate2D, place: Places) async throws -> LocationModel {
         
         let url = URL(string: "https://api.content.tripadvisor.com/api/v1/location/nearby_search")!
         
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         
         let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "latLong", value: "40.21742%2C28.96812"),
+            URLQueryItem(name: "latLong", value: "\(coordinate.latitude)%2C\(coordinate.longitude)"),
             URLQueryItem(name: "key", value: "C05C617B619D401E9896F326F6226771"),
-            URLQueryItem(name: "category", value: "hotels"),
+            URLQueryItem(name: "category", value: place.rawValue),
             URLQueryItem(name: "radius", value: "10"),
             URLQueryItem(name: "radiusUnit", value: "km"),
             URLQueryItem(name: "language", value: "en"),
@@ -44,7 +89,7 @@ final class NetworkManager {
         request.allHTTPHeaderFields = ["accept": "application/json"]
         
         let (data, response) = try await URLSession.shared.data(for: request)
-        print(String(decoding: data, as: UTF8.self))
+        
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw APIError.serverError
@@ -63,7 +108,36 @@ final class NetworkManager {
             throw APIError.parseError
         }
         
+    }
+    
+    func downloadDetailsData(locationId: String) async throws {
         
+        let url = URL(string: "https://api.content.tripadvisor.com/api/v1/location/\(locationId)/details")!
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "key", value: "C05C617B619D401E9896F326F6226771"),
+            URLQueryItem(name: "language", value: "en"),
+            URLQueryItem(name: "currency", value: "USD"),
+        ]
+        components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
+        
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "GET"
+        request.timeoutInterval = 10
+        request.allHTTPHeaderFields = ["accept": "application/json"]
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw APIError.serverError
+        }
+        
+        if data.isEmpty {
+            throw APIError.dataError
+        }
+        
+        
+        print(String(decoding: data, as: UTF8.self))
         
         
     }

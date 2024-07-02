@@ -31,15 +31,18 @@ struct LocationData: Codable {
 
 
 struct AddressObj: Codable {
-    let street1: String
+    let street1: String?
     let street2: String?
-    let city: String
-    let state: String
-    let country: String
-    let postalcode, addressString: String
+    let city: String?
+    let state: String?
+    let country: String?
+    let postalcode, addressString: String?
 
     enum CodingKeys: String, CodingKey {
         case street1, street2, city, state, country, postalcode
         case addressString = "address_string"
     }
 }
+
+
+
