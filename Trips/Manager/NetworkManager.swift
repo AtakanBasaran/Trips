@@ -65,6 +65,7 @@ final class NetworkManager {
     
     private init() {}
     
+    //MARK: - Download Data
     
     func downloadData(coordinate: CLLocationCoordinate2D, place: Places) async throws -> LocationModel {
         
@@ -110,7 +111,9 @@ final class NetworkManager {
         
     }
     
-    func downloadDetailsData(locationId: String) async throws {
+    //MARK: - Download Details
+    
+    func downloadDetailsData(locationId: String) async throws -> LocationDetailsModel {
         
         let url = URL(string: "https://api.content.tripadvisor.com/api/v1/location/\(locationId)/details")!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
@@ -136,11 +139,58 @@ final class NetworkManager {
             throw APIError.dataError
         }
         
+
         
-        print(String(decoding: data, as: UTF8.self))
+        do {
+            let decodedData = try JSONDecoder().decode(LocationDetailsModel.self, from: data)
+            return decodedData
+            
+        } catch {
+            throw APIError.parseError
+        }
+    }
+    
+    //MARK: - Download Photos
+    
+    func downloadPhotos(locationId: String) async throws -> LocationImageModel {
         
+        let url = URL(string: "https://api.content.tripadvisor.com/api/v1/location/\(locationId)/photos")!
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "key", value: "C05C617B619D401E9896F326F6226771"),
+            URLQueryItem(name: "language", value: "en"),
+        ]
+        components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
+        
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "GET"
+        request.timeoutInterval = 10
+        request.allHTTPHeaderFields = ["accept": "application/json"]
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw APIError.serverError
+        }
+        
+        if data.isEmpty {
+            throw APIError.dataError
+        }
+        
+        do {
+            let decodeData = try JSONDecoder().decode(LocationImageModel.self, from: data)
+            return decodeData
+            
+        } catch {
+            throw APIError.parseError
+        }
         
     }
+}
+
+extension NetworkManager {
+    
+   
 }
 
 

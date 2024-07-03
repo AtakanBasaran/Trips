@@ -21,10 +21,11 @@ struct ContentView: View {
                 
                 NavigationBarPick(place: $place)
                 
-                List {
-                    ForEach(vm.locations, id: \.locationID) { location in
+                ScrollView {
+                    
+                    ForEach(Array(zip(vm.locationDetails, vm.locationPhotoModels)), id: \.0.locationID) { (locationDetail, locationImage) in
                         
-                        Text(location.name)
+                        LocationDetailCell(locationDetail: locationDetail, locationImageModel: locationImage)
                     }
                         
                 }
@@ -38,10 +39,13 @@ struct ContentView: View {
         .onChange(of: place) { value in
             
             if let coordinate = locationManager.lastKnownLocation {
+                vm.locationDetails.removeAll()
+                vm.locationPhotoModels.removeAll()
                 vm.fetchData(coordinate: coordinate, place: value)
             }
         }
         
+
         .task {
             locationManager.checkLocationAuthorization()
             if let coordinate = locationManager.lastKnownLocation {

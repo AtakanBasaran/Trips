@@ -18,22 +18,28 @@
 		BB8486662C330C79006F1FC9 /* NavigationBarPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */; };
 		BB84866A2C331E05006F1FC9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486692C331E05006F1FC9 /* LocationManager.swift */; };
 		BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */; };
+		BB84866E2C3468C8006F1FC9 /* LocationDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84866D2C3468C8006F1FC9 /* LocationDetailCell.swift */; };
+		BB8486722C34A7A9006F1FC9 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486712C34A7A9006F1FC9 /* MockData.swift */; };
+		BB8486742C34C04B006F1FC9 /* LocationImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486732C34C04B006F1FC9 /* LocationImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB6FEA0E2C32D5C5006299D2 /* Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FEA112C32D5C5006299D2 /* TripsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsApp.swift; sourceTree = "<group>"; };
-		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = ../LocationView.swift; sourceTree = "<group>"; };
+		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = ../../LocationView.swift; sourceTree = "<group>"; };
 		BB6FEA152C32D5C7006299D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BB84865D2C32DF74006F1FC9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		BB8486632C330BDB006F1FC9 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationView.swift; sourceTree = "<group>"; };
-		BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarPick.swift; path = ../../NavigationBarPick.swift; sourceTree = "<group>"; };
+		BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarPick.swift; path = ../../../NavigationBarPick.swift; sourceTree = "<group>"; };
 		BB8486672C3310F7006F1FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BB8486692C331E05006F1FC9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsModel.swift; sourceTree = "<group>"; };
+		BB84866D2C3468C8006F1FC9 /* LocationDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationDetailCell.swift; path = ../LocationDetailCell.swift; sourceTree = "<group>"; };
+		BB8486712C34A7A9006F1FC9 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		BB8486732C34C04B006F1FC9 /* LocationImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			children = (
 				BB8486672C3310F7006F1FC9 /* Info.plist */,
 				BB6FEA112C32D5C5006299D2 /* TripsApp.swift */,
+				BB8486702C34A786006F1FC9 /* MockData */,
 				BB6FEA242C32DF44006299D2 /* Model */,
 				BB6FEA1F2C32D5DD006299D2 /* Manager */,
 				BB6FEA212C32D5E6006299D2 /* ViewModel */,
@@ -98,9 +105,8 @@
 		BB6FEA202C32D5E2006299D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB84866F2C3468CE006F1FC9 /* NearbyLocation */,
 				BB8486632C330BDB006F1FC9 /* PickLocationView.swift */,
-				BB6FEA132C32D5C5006299D2 /* LocationView.swift */,
-				BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,8 +124,27 @@
 			children = (
 				BB84865D2C32DF74006F1FC9 /* LocationModel.swift */,
 				BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */,
+				BB8486732C34C04B006F1FC9 /* LocationImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BB84866F2C3468CE006F1FC9 /* NearbyLocation */ = {
+			isa = PBXGroup;
+			children = (
+				BB6FEA132C32D5C5006299D2 /* LocationView.swift */,
+				BB84866D2C3468C8006F1FC9 /* LocationDetailCell.swift */,
+				BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */,
+			);
+			path = NearbyLocation;
+			sourceTree = "<group>";
+		};
+		BB8486702C34A786006F1FC9 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				BB8486712C34A7A9006F1FC9 /* MockData.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +225,10 @@
 				BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */,
 				BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */,
 				BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */,
+				BB8486742C34C04B006F1FC9 /* LocationImageModel.swift in Sources */,
 				BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */,
+				BB8486722C34A7A9006F1FC9 /* MockData.swift in Sources */,
+				BB84866E2C3468C8006F1FC9 /* LocationDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
