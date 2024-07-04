@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LocationView: View {
     
     @StateObject var vm = LocationViewModel()
     @StateObject var locationManager = LocationManager()
@@ -17,22 +17,30 @@ struct ContentView: View {
         
         NavigationStack {
             
-            VStack {
+            ZStack {
                 
-                NavigationBarPick(place: $place)
-                
-                ScrollView {
+                VStack {
                     
-                    ForEach(Array(zip(vm.locationDetails, vm.locationPhotoModels)), id: \.0.locationID) { (locationDetail, locationImage) in
+                    NavigationBarPick(place: $place)
+                        .padding(.top, 10)
+                    
+                    ScrollView {
                         
-                        LocationDetailCell(locationDetail: locationDetail, locationImageModel: locationImage)
+                        ForEach(Array(zip(vm.locationDetails, vm.locationPhotoModels)), id: \.0.locationID) { (locationDetail, locationImage) in
+                            
+                            LocationDetailCell(locationDetail: locationDetail, locationImageModel: locationImage)
+                        }
+                            
                     }
-                        
+                    
+                   
                 }
                 
-               
+                if vm.isLoading {
+                    ProgressLoadingView()
+                }
             }
-            .navigationTitle("Nearby Search")
+            
             
         }
         
@@ -58,5 +66,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    LocationView()
 }

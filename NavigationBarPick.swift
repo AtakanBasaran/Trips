@@ -14,51 +14,60 @@ struct NavigationBarPick: View {
     
     var body: some View {
         
-        HStack {
+        VStack {
             
+            Text("Nearby Location")
+                .font(.system(size: 26, weight: .bold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 15)
+                
             
-            Menu {
-                
-                Button(action: {
-                    place = .restaurants
-                }, label: {
-                    Label("Restaurants", systemImage: "fork.knife")
-                })
-                
-                Button(action: {
-                    place = .hotels
-                }, label: {
-                    Label("Hotels", systemImage: "house")
-                })
-                
-                Button(action: {
-                    place = .attractions
-                }, label: {
-                    Label("Attractions", systemImage: "mountain.2")
-                })
-                
-                Button(action: {
-                    place = .geos
-                }, label: {
-                    Label("Geos", systemImage: "globe")
-                })
+            HStack {
                 
                 
-                
-            } label: {
+                Menu {
+                    
+                    Button(action: {
+                        place = .restaurants
+                    }, label: {
+                        Label("Restaurants", systemImage: "fork.knife")
+                    })
+                    
+                    Button(action: {
+                        place = .hotels
+                    }, label: {
+                        Label("Hotels", systemImage: "house")
+                    })
+                    
+                    Button(action: {
+                        place = .attractions
+                    }, label: {
+                        Label("Attractions", systemImage: "mountain.2")
+                    })
+                    
+                    Button(action: {
+                        place = .geos
+                    }, label: {
+                        Label("Geos", systemImage: "globe")
+                    })
+                    
+                    
+                    
+                } label: {
 
-                HStack {
-                    Text(place.category)
-                    Image(systemName: place.systemImage)
-                    Image(systemName: "chevron.down")
+                    HStack {
+                        Text(place.category)
+                        Image(systemName: place.systemImage)
+                        Image(systemName: "chevron.down")
+                    }
+                    .foregroundStyle(colorScheme == .dark ? .white : .black)
+                    .font(.system(size: 18, weight: .medium))
                 }
-                .foregroundStyle(colorScheme == .dark ? .white : .black)
-                .font(.system(size: 18, weight: .medium))
+                
+                Spacer()
             }
-            
-            Spacer()
+            .padding(.leading, 15)
         }
-        .padding(.leading, 15)
     }
 }
 

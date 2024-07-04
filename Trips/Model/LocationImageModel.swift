@@ -15,13 +15,13 @@ struct LocationImageModel: Codable {
 
 struct LocationImage: Codable {
     let id: Int
-    let isBlessed: Bool
-    let caption: String
-    let publishedDate: String
+    let isBlessed: Bool?
+    let caption: String?
+    let publishedDate: String?
     let images: Images
-    let album: String
-    let source: Source
-    let user: User
+    let album: String?
+    let source: Source?
+    let user: User?
 
     
 
@@ -38,11 +38,11 @@ struct LocationImage: Codable {
 }
 
 struct Images: Codable {
-    let thumbnail: ImageInfo
-    let small: ImageInfo
-    let medium: ImageInfo
-    let large: ImageInfo
-    let original: ImageInfo
+    let thumbnail: ImageInfo?
+    let small: ImageInfo?
+    let medium: ImageInfo?
+    let large: ImageInfo?
+    let original: ImageInfo?
 
     struct ImageInfo: Codable {
         let height: Int

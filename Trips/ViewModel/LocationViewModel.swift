@@ -115,7 +115,7 @@ class LocationViewModel: ObservableObject {
                     }
                     
                     isLoading = false
-                    print(locationPhotoModels)
+                    
                     
                 } catch {
                     
