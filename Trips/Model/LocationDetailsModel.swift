@@ -7,16 +7,14 @@
 
 import Foundation
 
-import Foundation
-
-import Foundation
 
 struct LocationDetailsModel: Codable {
+    
     let locationID: String
-    let name: String
+    let name: String?
     let description: String?
-    let webURL: String
-    let addressObj: AddressObj
+    let webURL: String?
+    let addressObj: AddressObj?
     let ancestors: [Ancestor]?
     let latitude: String?
     let longitude: String?

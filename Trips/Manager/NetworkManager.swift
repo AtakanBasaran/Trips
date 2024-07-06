@@ -139,7 +139,6 @@ final class NetworkManager {
             throw APIError.dataError
         }
         
-
         
         do {
             let decodedData = try JSONDecoder().decode(LocationDetailsModel.self, from: data)
@@ -188,9 +187,45 @@ final class NetworkManager {
     }
 }
 
+//MARK: - Download Search Photos
+
 extension NetworkManager {
     
-   
+    func downloadSearchData(location: String) async throws -> LocationModel {
+        
+        let url = URL(string: "https://api.content.tripadvisor.com/api/v1/location/search")!
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "key", value: "C05C617B619D401E9896F326F6226771"),
+            URLQueryItem(name: "searchQuery", value: location),
+            URLQueryItem(name: "language", value: "en"),
+        ]
+        components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
+        
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "GET"
+        request.timeoutInterval = 10
+        request.allHTTPHeaderFields = ["accept": "application/json"]
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+//        print(String(decoding: data, as: UTF8.self))
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw APIError.serverError
+        }
+        
+        if data.isEmpty {
+            throw APIError.dataError
+        }
+        
+        do {
+            let decodedData = try JSONDecoder().decode(LocationModel.self, from: data)
+            return decodedData
+        } catch {
+            throw APIError.parseError
+        }
+         
+    }
 }
 
 

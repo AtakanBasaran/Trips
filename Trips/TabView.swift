@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabViews: View {
     
+    @StateObject var vm = LocationViewModel()
+    
     var body: some View {
         
         TabView {
@@ -18,8 +20,14 @@ struct TabViews: View {
                     Label("Nearby", systemImage: "location")
                 }
             
+            LocationSearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+            
         }
         .tint(.green)
+        .environmentObject(vm)
     }
 }
 

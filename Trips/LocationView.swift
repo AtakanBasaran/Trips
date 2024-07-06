@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationView: View {
     
-    @StateObject var vm = LocationViewModel()
+    @EnvironmentObject var vm: LocationViewModel
     @StateObject var locationManager = LocationManager()
     @State private var place: Places = .restaurants
     
@@ -28,12 +28,19 @@ struct LocationView: View {
                         
                         ForEach(Array(zip(vm.locationDetails, vm.locationPhotoModels)), id: \.0.locationID) { (locationDetail, locationImage) in
                             
-                            LocationDetailCell(locationDetail: locationDetail, locationImageModel: locationImage)
-                        }
+                            NavigationLink {
+                                LocationWebView(urlString: locationDetail.webURL)
+                            } label: {
+                                LocationDetailCell(locationDetail: locationDetail, locationImageModel: locationImage)
+                            }
+
                             
+                        }
+                        
                     }
                     
-                   
+                    
+                    
                 }
                 
                 if vm.isLoading {
@@ -47,24 +54,45 @@ struct LocationView: View {
         .onChange(of: place) { value in
             
             if let coordinate = locationManager.lastKnownLocation {
-                vm.locationDetails.removeAll()
-                vm.locationPhotoModels.removeAll()
+                
+                DispatchQueue.main.async {
+                    vm.locationDetails.removeAll()
+                    vm.locationPhotoModels.removeAll()
+                }
                 vm.fetchData(coordinate: coordinate, place: value)
             }
         }
         
-
+        
         .task {
             locationManager.checkLocationAuthorization()
             if let coordinate = locationManager.lastKnownLocation {
                 vm.fetchData(coordinate: coordinate, place: place)
             }
         }
-    
+        
+        .refreshable {
+            if let coordinate = locationManager.lastKnownLocation {
+                
+                DispatchQueue.main.async {
+                    vm.locationDetails.removeAll()
+                    vm.locationPhotoModels.removeAll()
+                }
+                vm.fetchData(coordinate: coordinate, place: place)
+            }
+        }
+        
     }
     
 }
 
-#Preview {
-    LocationView()
+
+struct LocationView_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = LocationViewModel()
+        // Add some mock data to the view model if needed
+        
+        return LocationView()
+            .environmentObject(viewModel)
+    }
 }

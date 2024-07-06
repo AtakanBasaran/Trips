@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LocationDetailCell: View {
     
+    @Environment(\.colorScheme) var colorScheme
     let locationDetail: LocationDetailsModel
     let locationImageModel: LocationImageModel?
     
@@ -17,9 +18,14 @@ struct LocationDetailCell: View {
         HStack {
             
             VStack(alignment: .leading, spacing: 7) {
-                Text(locationDetail.name)
-                    .font(.system(size: 20, weight: .bold))
-                    .multilineTextAlignment(.leading)
+                
+                if let locationName = locationDetail.name {
+                    Text(locationName)
+                        .font(.system(size: 20, weight: .bold))
+                        .multilineTextAlignment(.leading)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                }
+                
                 
                 HStack {
                     if let rating = locationDetail.rating, let doubleRating = Double(rating)  {
@@ -30,6 +36,7 @@ struct LocationDetailCell: View {
                         if let revInt = Int(numReviews) {
                             if revInt > 0 {
                                 Text("(\(numReviews))")
+                                    .foregroundStyle(colorScheme == .dark ? .white : .black)
                             }
                         }
                         
@@ -41,6 +48,7 @@ struct LocationDetailCell: View {
                 if let priceLevel = locationDetail.priceLevel {
                     Text("Price Level: \(priceLevel)")
                         .font(.system(size: 14, weight: .medium))
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
                 }
                 
             }

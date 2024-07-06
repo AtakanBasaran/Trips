@@ -12,6 +12,9 @@
 		BB6FEA162C32D5C7006299D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FEA152C32D5C7006299D2 /* Assets.xcassets */; };
 		BB6FEA192C32D5C7006299D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */; };
 		BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */; };
+		BB778E762C36A45600E358E8 /* WebViewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB778E752C36A45600E358E8 /* WebViewLocation.swift */; };
+		BB778E792C36C33500E358E8 /* LocationWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB778E782C36C33500E358E8 /* LocationWebView.swift */; };
+		BB778E7B2C36D56A00E358E8 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB778E7A2C36D56A00E358E8 /* LocationSearchView.swift */; };
 		BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84865D2C32DF74006F1FC9 /* LocationModel.swift */; };
 		BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */; };
 		BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486632C330BDB006F1FC9 /* PickLocationView.swift */; };
@@ -33,6 +36,9 @@
 		BB6FEA152C32D5C7006299D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6FEA182C32D5C7006299D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB6FEA222C32D5FF006299D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BB778E752C36A45600E358E8 /* WebViewLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLocation.swift; sourceTree = "<group>"; };
+		BB778E782C36C33500E358E8 /* LocationWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWebView.swift; sourceTree = "<group>"; };
+		BB778E7A2C36D56A00E358E8 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		BB84865D2C32DF74006F1FC9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		BB8486632C330BDB006F1FC9 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationView.swift; sourceTree = "<group>"; };
@@ -113,9 +119,9 @@
 		BB6FEA202C32D5E2006299D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB88FFE02C36A33B00068B34 /* New Group */,
 				BB84866F2C3468CE006F1FC9 /* NearbyLocation */,
 				BBCBA8E42C369A5700DE08BE /* FindLocation */,
+				BB88FFE02C36A33B00068B34 /* WebViews */,
 				BBCBA8DD2C35BF4600DE08BE /* Other */,
 			);
 			path = View;
@@ -145,6 +151,7 @@
 				BB6FEA132C32D5C5006299D2 /* LocationView.swift */,
 				BB84866D2C3468C8006F1FC9 /* LocationDetailCell.swift */,
 				BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */,
+				BB778E782C36C33500E358E8 /* LocationWebView.swift */,
 			);
 			path = NearbyLocation;
 			sourceTree = "<group>";
@@ -157,11 +164,12 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
-		BB88FFE02C36A33B00068B34 /* New Group */ = {
+		BB88FFE02C36A33B00068B34 /* WebViews */ = {
 			isa = PBXGroup;
 			children = (
+				BB778E752C36A45600E358E8 /* WebViewLocation.swift */,
 			);
-			path = "New Group";
+			path = WebViews;
 			sourceTree = "<group>";
 		};
 		BBCBA8DD2C35BF4600DE08BE /* Other */ = {
@@ -176,6 +184,7 @@
 		BBCBA8E42C369A5700DE08BE /* FindLocation */ = {
 			isa = PBXGroup;
 			children = (
+				BB778E7A2C36D56A00E358E8 /* LocationSearchView.swift */,
 			);
 			path = FindLocation;
 			sourceTree = "<group>";
@@ -252,16 +261,19 @@
 			files = (
 				BB8486662C330C79006F1FC9 /* NavigationBarPick.swift in Sources */,
 				BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */,
+				BB778E762C36A45600E358E8 /* WebViewLocation.swift in Sources */,
 				BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */,
 				BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */,
 				BB84866A2C331E05006F1FC9 /* LocationManager.swift in Sources */,
 				BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */,
+				BB778E7B2C36D56A00E358E8 /* LocationSearchView.swift in Sources */,
 				BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */,
 				BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */,
 				BB8486742C34C04B006F1FC9 /* LocationImageModel.swift in Sources */,
 				BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */,
 				BBCBA8E32C3698D700DE08BE /* TabView.swift in Sources */,
 				BB8486722C34A7A9006F1FC9 /* MockData.swift in Sources */,
+				BB778E792C36C33500E358E8 /* LocationWebView.swift in Sources */,
 				BBCBA8E12C35CCA500DE08BE /* RatingCircleView.swift in Sources */,
 				BB84866E2C3468C8006F1FC9 /* LocationDetailCell.swift in Sources */,
 				BBCBA8DF2C35BF7900DE08BE /* ProgressLoadingView.swift in Sources */,

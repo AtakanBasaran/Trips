@@ -16,8 +16,8 @@ struct LocationData: Codable {
     
     let locationID: String
     let name: String
-    let distance: String
-    let bearing: String
+    let distance: String?
+    let bearing: String?
     let addressObj: AddressObj
     
     enum CodingKeys: String, CodingKey {
