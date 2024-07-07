@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TabViews: View {
     
-    @StateObject var vm = LocationViewModel()
     
     var body: some View {
         
@@ -27,7 +26,7 @@ struct TabViews: View {
             
         }
         .tint(.green)
-        .environmentObject(vm)
+        
     }
 }
 

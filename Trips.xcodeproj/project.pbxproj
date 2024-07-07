@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB67078B2C3ABE7F00993D90 /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = BB67078A2C3ABE7F00993D90 /* OptionallyDecodable */; };
 		BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA112C32D5C5006299D2 /* TripsApp.swift */; };
 		BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA132C32D5C5006299D2 /* LocationView.swift */; };
 		BB6FEA162C32D5C7006299D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FEA152C32D5C7006299D2 /* Assets.xcassets */; };
@@ -51,7 +52,7 @@
 		BB8486732C34C04B006F1FC9 /* LocationImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationImageModel.swift; sourceTree = "<group>"; };
 		BBCBA8DE2C35BF7900DE08BE /* ProgressLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
 		BBCBA8E02C35CCA500DE08BE /* RatingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCircleView.swift; sourceTree = "<group>"; };
-		BBCBA8E22C3698D700DE08BE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		BBCBA8E22C3698D700DE08BE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabView.swift; path = ../TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB67078B2C3ABE7F00993D90 /* OptionallyDecodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +88,6 @@
 			children = (
 				BB8486672C3310F7006F1FC9 /* Info.plist */,
 				BB6FEA112C32D5C5006299D2 /* TripsApp.swift */,
-				BBCBA8E22C3698D700DE08BE /* TabView.swift */,
 				BB8486702C34A786006F1FC9 /* MockData */,
 				BB6FEA242C32DF44006299D2 /* Model */,
 				BB6FEA1F2C32D5DD006299D2 /* Manager */,
@@ -119,6 +120,7 @@
 		BB6FEA202C32D5E2006299D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BBCBA8E22C3698D700DE08BE /* TabView.swift */,
 				BB84866F2C3468CE006F1FC9 /* NearbyLocation */,
 				BBCBA8E42C369A5700DE08BE /* FindLocation */,
 				BB88FFE02C36A33B00068B34 /* WebViews */,
@@ -205,6 +207,9 @@
 			dependencies = (
 			);
 			name = Trips;
+			packageProductDependencies = (
+				BB67078A2C3ABE7F00993D90 /* OptionallyDecodable */,
+			);
 			productName = Trips;
 			productReference = BB6FEA0E2C32D5C5006299D2 /* Trips.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +238,9 @@
 				Base,
 			);
 			mainGroup = BB6FEA052C32D5C5006299D2;
+			packageReferences = (
+				BB6707892C3ABE7F00993D90 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */,
+			);
 			productRefGroup = BB6FEA0F2C32D5C5006299D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -488,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB6707892C3ABE7F00993D90 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/idrougge/OptionallyDecodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB67078A2C3ABE7F00993D90 /* OptionallyDecodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6707892C3ABE7F00993D90 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
+			productName = OptionallyDecodable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB6FEA062C32D5C5006299D2 /* Project object */;
 }

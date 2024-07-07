@@ -14,7 +14,7 @@ class LocationViewModel: ObservableObject {
     @Published var locations: [LocationData] = []
     @Published var locationDetails: [LocationDetailsModel] = []
     @Published var locationPhotoModels: [LocationImageModel] = []
-    @Published var isLoading = false
+//    @Published var isLoading = false
     
     @Published var locationsSearch: [LocationData] = []
     @Published var locationSearchDetails: [LocationDetailsModel] = []
@@ -23,7 +23,7 @@ class LocationViewModel: ObservableObject {
     
     func fetchData(coordinate: CLLocationCoordinate2D, place: Places) {
         
-        isLoading = true
+//        isLoading = true
         
         Task {
             
@@ -98,11 +98,11 @@ extension LocationViewModel {
                         }
                     }
                     
-                    isLoading = false
+//                    isLoading = false
                     
                 } catch {
                     
-                    isLoading = false
+//                    isLoading = false
                     if let serverError = error as? APIError {
                         
                         switch serverError {
@@ -158,12 +158,12 @@ extension LocationViewModel {
                         }
                     }
                     
-                    isLoading = false
+//                    isLoading = false
                     
                     
                 } catch {
                     
-                    isLoading = false
+//                    isLoading = false
                     
                     if let serverError = error as? APIError {
                         
@@ -201,13 +201,14 @@ extension LocationViewModel {
                 DispatchQueue.main.async {
                     self.locationsSearch = data.data
                     
-//                    DispatchQueue.global().async {
-//                        self.fetchDetailData(isNearby: false)
-//                        self.fetchLocationPhoto(isNearby: false)
-//                    }
+                    DispatchQueue.global().async {
+                        self.fetchDetailData(isNearby: false)
+                        self.fetchLocationPhoto(isNearby: false)
+                    }
                 }
                 
             } catch {
+                
                 if let serviceError = error as? APIError {
                     
                     switch serviceError {

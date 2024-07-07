@@ -43,15 +43,17 @@ struct LocationView: View {
                     
                 }
                 
-                if vm.isLoading {
-                    ProgressLoadingView()
-                }
+//                if vm.isLoading {
+//                    ProgressLoadingView()
+//                }
             }
             
             
         }
         
         .onChange(of: place) { value in
+            
+            locationManager.checkLocationAuthorization()
             
             if let coordinate = locationManager.lastKnownLocation {
                 
@@ -65,13 +67,20 @@ struct LocationView: View {
         
         
         .task {
-            locationManager.checkLocationAuthorization()
-            if let coordinate = locationManager.lastKnownLocation {
-                vm.fetchData(coordinate: coordinate, place: place)
+            
+            if vm.locations.isEmpty {
+                locationManager.checkLocationAuthorization()
+                
+                if let coordinate = locationManager.lastKnownLocation {
+                    vm.fetchData(coordinate: coordinate, place: place)
+                }
             }
         }
         
         .refreshable {
+            
+            locationManager.checkLocationAuthorization()
+            
             if let coordinate = locationManager.lastKnownLocation {
                 
                 DispatchQueue.main.async {
@@ -89,8 +98,8 @@ struct LocationView: View {
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
+        
         let viewModel = LocationViewModel()
-        // Add some mock data to the view model if needed
         
         return LocationView()
             .environmentObject(viewModel)

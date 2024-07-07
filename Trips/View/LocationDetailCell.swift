@@ -72,13 +72,6 @@ struct LocationDetailCell: View {
                     }
                 
             } placeholder: {
-//                Image("placeholder")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fill)
-//                    .frame(width: 110, height: 110)
-//                    .clipped()
-//                    .clipShape(.rect(cornerRadius: 15))
-//                    .padding(.trailing, 15)
                 
                 ZStack {
                     
@@ -96,6 +89,6 @@ struct LocationDetailCell: View {
     }
 }
 
-#Preview {
-    LocationDetailCell(locationDetail: MockData.mockLocationDetail, locationImageModel: MockData.mockImageModel)
-}
+//#Preview {
+//    LocationDetailCell(locationDetail: MockData.mockLocationDetail, locationImageModel: MockData.mockImageModel)
+//}

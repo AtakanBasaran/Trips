@@ -33,13 +33,18 @@ struct LocationSearchView: View {
                 }
                 .searchable(text: $searchLocationText, placement: .toolbar, prompt: "Search Location")
                 .onSubmit(of: .search) {
+                    DispatchQueue.main.async {
+                        vm.locationSearchDetails.removeAll()
+                        vm.locationSearchPhotoModels.removeAll()
+                    }
                     vm.fetchSearchData(location: searchLocationText)
                 }
                 
-                if vm.isLoading {
-                    ProgressLoadingView()
-                }
+//                if vm.isLoading {
+//                    ProgressLoadingView()
+//                }
             }
+            .navigationTitle("Search Location")
         }
     }
 }

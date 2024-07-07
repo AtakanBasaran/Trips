@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct TripsApp: App {
+    
+    @StateObject var vm = LocationViewModel()
+    @StateObject var locationManager = LocationManager()
+    
+    
     var body: some Scene {
+        
         WindowGroup {
             TabViews()
+                .task {
+                    locationManager.checkLocationAuthorization()
+                }
+                .environmentObject(vm)
         }
     }
 }

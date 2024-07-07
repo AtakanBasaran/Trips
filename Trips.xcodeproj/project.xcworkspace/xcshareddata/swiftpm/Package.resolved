@@ -1,0 +1,15 @@
+{
+  "originHash" : "8d7c4d16cce856ecc8e844d4ee3314bf931deb173a25b0a74f07255a20f5359e",
+  "pins" : [
+    {
+      "identity" : "optionallydecodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/idrougge/OptionallyDecodable",
+      "state" : {
+        "revision" : "0171cdf9e90233c68302b95fb6063f2f7279b031",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
