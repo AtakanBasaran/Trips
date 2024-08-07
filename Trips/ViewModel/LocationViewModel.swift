@@ -14,16 +14,20 @@ class LocationViewModel: ObservableObject {
     @Published var locations: [LocationData] = []
     @Published var locationDetails: [LocationDetailsModel] = []
     @Published var locationPhotoModels: [LocationImageModel] = []
-//    @Published var isLoading = false
+    @Published var isLoadingNearby = false
+    
     
     @Published var locationsSearch: [LocationData] = []
     @Published var locationSearchDetails: [LocationDetailsModel] = []
     @Published var locationSearchPhotoModels: [LocationImageModel] = []
+    @Published var isLoadingSearch = false
     
     
     func fetchData(coordinate: CLLocationCoordinate2D, place: Places) {
         
-//        isLoading = true
+        DispatchQueue.main.async {
+            self.isLoadingNearby = true
+        }
         
         Task {
             
@@ -40,6 +44,10 @@ class LocationViewModel: ObservableObject {
                 }
                 
             } catch {
+                
+                DispatchQueue.main.async {
+                    self.isLoadingNearby = false
+                }
                 
                 if let serverError = error as? APIError {
                     
@@ -98,11 +106,19 @@ extension LocationViewModel {
                         }
                     }
                     
-//                    isLoading = false
+
+                    DispatchQueue.main.async {
+                        self.isLoadingNearby = false
+                        self.isLoadingSearch = false
+                    }
                     
                 } catch {
                     
-//                    isLoading = false
+                    DispatchQueue.main.async {
+                        self.isLoadingNearby = false
+                        self.isLoadingSearch = false
+                    }
+                    
                     if let serverError = error as? APIError {
                         
                         switch serverError {
@@ -158,12 +174,18 @@ extension LocationViewModel {
                         }
                     }
                     
-//                    isLoading = false
+                    DispatchQueue.main.async {
+                        self.isLoadingNearby = false
+                        self.isLoadingSearch = false
+                    }
                     
                     
                 } catch {
                     
-//                    isLoading = false
+                    DispatchQueue.main.async {
+                        self.isLoadingNearby = false
+                        self.isLoadingSearch = false
+                    }
                     
                     if let serverError = error as? APIError {
                         
@@ -191,7 +213,9 @@ extension LocationViewModel {
     
     func fetchSearchData(location: String) {
         
-//        isLoading = true
+        DispatchQueue.main.async {
+            self.isLoadingSearch = true
+        }
         
         Task {
             
@@ -208,6 +232,10 @@ extension LocationViewModel {
                 }
                 
             } catch {
+                
+                DispatchQueue.main.async {
+                    self.isLoadingSearch = false
+                }
                 
                 if let serviceError = error as? APIError {
                     

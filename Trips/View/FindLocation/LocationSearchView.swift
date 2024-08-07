@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct LocationSearchView: View {
     
@@ -28,11 +29,14 @@ struct LocationSearchView: View {
                         } label: {
                             LocationDetailCell(locationDetail: data, locationImageModel: photo)
                         }
-           
+                        
                     }
                 }
+                .padding(.top, 5)
+                .padding(.bottom, 5)
                 .searchable(text: $searchLocationText, placement: .toolbar, prompt: "Search Location")
                 .onSubmit(of: .search) {
+                    
                     DispatchQueue.main.async {
                         vm.locationSearchDetails.removeAll()
                         vm.locationSearchPhotoModels.removeAll()
@@ -40,11 +44,12 @@ struct LocationSearchView: View {
                     vm.fetchSearchData(location: searchLocationText)
                 }
                 
-//                if vm.isLoading {
-//                    ProgressLoadingView()
-//                }
+                
+                if vm.isLoadingSearch {
+                    ProgressLoadingView()
+                }
             }
-            .navigationTitle("Search Location")
+            .navigationTitle("Locations")
         }
     }
 }
@@ -58,3 +63,6 @@ struct LocationSearchView_Previews: PreviewProvider {
             .environmentObject(viewModel)
     }
 }
+
+
+

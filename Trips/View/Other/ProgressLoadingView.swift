@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct ProgressLoadingView: View {
     
@@ -16,7 +17,11 @@ struct ProgressLoadingView: View {
             Color(.systemBackground)
                 .ignoresSafeArea()
             
-            ProgressView()
+            LottieView(animation: .named("search"))
+                .looping()
+                .frame(width: 250, height: 250, alignment: .top)
+                .clipped()
+                .padding(.bottom, 100)
             
         }
         .ignoresSafeArea()

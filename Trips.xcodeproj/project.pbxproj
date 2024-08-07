@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB14B6B82C63F282009C8614 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14B6B72C63F282009C8614 /* EmptyStateView.swift */; };
+		BB14B6BA2C63F460009C8614 /* Animation - 1723055284129.json in Resources */ = {isa = PBXBuildFile; fileRef = BB14B6B92C63F460009C8614 /* Animation - 1723055284129.json */; };
 		BB67078B2C3ABE7F00993D90 /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = BB67078A2C3ABE7F00993D90 /* OptionallyDecodable */; };
 		BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA112C32D5C5006299D2 /* TripsApp.swift */; };
 		BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA132C32D5C5006299D2 /* LocationView.swift */; };
@@ -16,6 +18,8 @@
 		BB778E762C36A45600E358E8 /* WebViewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB778E752C36A45600E358E8 /* WebViewLocation.swift */; };
 		BB778E792C36C33500E358E8 /* LocationWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB778E782C36C33500E358E8 /* LocationWebView.swift */; };
 		BB778E7B2C36D56A00E358E8 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB778E7A2C36D56A00E358E8 /* LocationSearchView.swift */; };
+		BB7EF8D42C3C0F2500E03786 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BB7EF8D32C3C0F2500E03786 /* Lottie */; };
+		BB7EF8D62C3C0FB000E03786 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = BB7EF8D52C3C0FB000E03786 /* search.json */; };
 		BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84865D2C32DF74006F1FC9 /* LocationModel.swift */; };
 		BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */; };
 		BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486632C330BDB006F1FC9 /* PickLocationView.swift */; };
@@ -31,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB14B6B72C63F282009C8614 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		BB14B6B92C63F460009C8614 /* Animation - 1723055284129.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1723055284129.json"; sourceTree = "<group>"; };
 		BB6FEA0E2C32D5C5006299D2 /* Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FEA112C32D5C5006299D2 /* TripsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsApp.swift; sourceTree = "<group>"; };
 		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = ../../LocationView.swift; sourceTree = "<group>"; };
@@ -40,6 +46,7 @@
 		BB778E752C36A45600E358E8 /* WebViewLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLocation.swift; sourceTree = "<group>"; };
 		BB778E782C36C33500E358E8 /* LocationWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWebView.swift; sourceTree = "<group>"; };
 		BB778E7A2C36D56A00E358E8 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		BB7EF8D52C3C0FB000E03786 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		BB84865D2C32DF74006F1FC9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		BB8486632C330BDB006F1FC9 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationView.swift; sourceTree = "<group>"; };
@@ -61,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB67078B2C3ABE7F00993D90 /* OptionallyDecodable in Frameworks */,
+				BB7EF8D42C3C0F2500E03786 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,8 @@
 				BB6FEA202C32D5E2006299D2 /* View */,
 				BB8486632C330BDB006F1FC9 /* PickLocationView.swift */,
 				BB6FEA152C32D5C7006299D2 /* Assets.xcassets */,
+				BB14B6B92C63F460009C8614 /* Animation - 1723055284129.json */,
+				BB7EF8D52C3C0FB000E03786 /* search.json */,
 				BB6FEA172C32D5C7006299D2 /* Preview Content */,
 			);
 			path = Trips;
@@ -179,6 +189,7 @@
 			children = (
 				BBCBA8DE2C35BF7900DE08BE /* ProgressLoadingView.swift */,
 				BBCBA8E02C35CCA500DE08BE /* RatingCircleView.swift */,
+				BB14B6B72C63F282009C8614 /* EmptyStateView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -209,6 +220,7 @@
 			name = Trips;
 			packageProductDependencies = (
 				BB67078A2C3ABE7F00993D90 /* OptionallyDecodable */,
+				BB7EF8D32C3C0F2500E03786 /* Lottie */,
 			);
 			productName = Trips;
 			productReference = BB6FEA0E2C32D5C5006299D2 /* Trips.app */;
@@ -240,6 +252,7 @@
 			mainGroup = BB6FEA052C32D5C5006299D2;
 			packageReferences = (
 				BB6707892C3ABE7F00993D90 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */,
+				BB7EF8D22C3C0F2500E03786 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = BB6FEA0F2C32D5C5006299D2 /* Products */;
 			projectDirPath = "";
@@ -255,6 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB14B6BA2C63F460009C8614 /* Animation - 1723055284129.json in Resources */,
+				BB7EF8D62C3C0FB000E03786 /* search.json in Resources */,
 				BB6FEA192C32D5C7006299D2 /* Preview Assets.xcassets in Resources */,
 				BB6FEA162C32D5C7006299D2 /* Assets.xcassets in Resources */,
 			);
@@ -269,6 +284,7 @@
 			files = (
 				BB8486662C330C79006F1FC9 /* NavigationBarPick.swift in Sources */,
 				BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */,
+				BB14B6B82C63F282009C8614 /* EmptyStateView.swift in Sources */,
 				BB778E762C36A45600E358E8 /* WebViewLocation.swift in Sources */,
 				BB6FEA232C32D5FF006299D2 /* NetworkManager.swift in Sources */,
 				BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */,
@@ -506,6 +522,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		BB7EF8D22C3C0F2500E03786 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -513,6 +537,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB6707892C3ABE7F00993D90 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
 			productName = OptionallyDecodable;
+		};
+		BB7EF8D32C3C0F2500E03786 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB7EF8D22C3C0F2500E03786 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

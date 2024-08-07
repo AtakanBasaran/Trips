@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct LocationView: View {
     
     @EnvironmentObject var vm: LocationViewModel
@@ -33,20 +34,18 @@ struct LocationView: View {
                             } label: {
                                 LocationDetailCell(locationDetail: locationDetail, locationImageModel: locationImage)
                             }
-
-                            
                         }
-                        
                     }
-                    
-                    
-                    
-                }
+                    .padding(.bottom, 5)
                 
-//                if vm.isLoading {
-//                    ProgressLoadingView()
-//                }
+      
+                }
+     
+                if vm.isLoadingNearby {
+                    ProgressLoadingView()
+                }
             }
+            
             
             
         }

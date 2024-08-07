@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 @main
 struct TripsApp: App {
     
@@ -25,3 +27,9 @@ struct TripsApp: App {
         }
     }
 }
+
+
+
+
+
+
