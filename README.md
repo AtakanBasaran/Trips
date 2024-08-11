@@ -1,0 +1,2 @@
+# Trips
+With this app, users see nearby locations for four different categories, restaurants, hotels, attractions and geos and select one they like, to see the details of the place over TripAdvisor website. Also, users can search locations they want and see the details of the locations over TripAdvisor website. In this project, TripAdvisor API is used for location search, nearby locations, location details and photos. WKWebView is used for location detail page of TripAdvisor website. MVVM is used in this SwiftUI project.
