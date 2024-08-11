@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB14B6B82C63F282009C8614 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14B6B72C63F282009C8614 /* EmptyStateView.swift */; };
-		BB14B6BA2C63F460009C8614 /* Animation - 1723055284129.json in Resources */ = {isa = PBXBuildFile; fileRef = BB14B6B92C63F460009C8614 /* Animation - 1723055284129.json */; };
+		BB14B6BA2C63F460009C8614 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = BB14B6B92C63F460009C8614 /* empty.json */; };
 		BB67078B2C3ABE7F00993D90 /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = BB67078A2C3ABE7F00993D90 /* OptionallyDecodable */; };
 		BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA112C32D5C5006299D2 /* TripsApp.swift */; };
 		BB6FEA142C32D5C5006299D2 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FEA132C32D5C5006299D2 /* LocationView.swift */; };
@@ -22,7 +22,6 @@
 		BB7EF8D62C3C0FB000E03786 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = BB7EF8D52C3C0FB000E03786 /* search.json */; };
 		BB84865E2C32DF74006F1FC9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84865D2C32DF74006F1FC9 /* LocationModel.swift */; };
 		BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */; };
-		BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486632C330BDB006F1FC9 /* PickLocationView.swift */; };
 		BB8486662C330C79006F1FC9 /* NavigationBarPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */; };
 		BB84866A2C331E05006F1FC9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8486692C331E05006F1FC9 /* LocationManager.swift */; };
 		BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84866B2C3445C4006F1FC9 /* LocationDetailsModel.swift */; };
@@ -36,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		BB14B6B72C63F282009C8614 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
-		BB14B6B92C63F460009C8614 /* Animation - 1723055284129.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1723055284129.json"; sourceTree = "<group>"; };
+		BB14B6B92C63F460009C8614 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
 		BB6FEA0E2C32D5C5006299D2 /* Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FEA112C32D5C5006299D2 /* TripsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsApp.swift; sourceTree = "<group>"; };
 		BB6FEA132C32D5C5006299D2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = ../../LocationView.swift; sourceTree = "<group>"; };
@@ -49,7 +48,6 @@
 		BB7EF8D52C3C0FB000E03786 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		BB84865D2C32DF74006F1FC9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		BB8486602C32EBAB006F1FC9 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
-		BB8486632C330BDB006F1FC9 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLocationView.swift; sourceTree = "<group>"; };
 		BB8486652C330C79006F1FC9 /* NavigationBarPick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarPick.swift; path = ../../../NavigationBarPick.swift; sourceTree = "<group>"; };
 		BB8486672C3310F7006F1FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BB8486692C331E05006F1FC9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -101,9 +99,9 @@
 				BB6FEA1F2C32D5DD006299D2 /* Manager */,
 				BB6FEA212C32D5E6006299D2 /* ViewModel */,
 				BB6FEA202C32D5E2006299D2 /* View */,
-				BB8486632C330BDB006F1FC9 /* PickLocationView.swift */,
+				BB70F7682C63F62E00DF3518 /* CustomViews */,
 				BB6FEA152C32D5C7006299D2 /* Assets.xcassets */,
-				BB14B6B92C63F460009C8614 /* Animation - 1723055284129.json */,
+				BB14B6B92C63F460009C8614 /* empty.json */,
 				BB7EF8D52C3C0FB000E03786 /* search.json */,
 				BB6FEA172C32D5C7006299D2 /* Preview Content */,
 			);
@@ -134,7 +132,6 @@
 				BB84866F2C3468CE006F1FC9 /* NearbyLocation */,
 				BBCBA8E42C369A5700DE08BE /* FindLocation */,
 				BB88FFE02C36A33B00068B34 /* WebViews */,
-				BBCBA8DD2C35BF4600DE08BE /* Other */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +152,16 @@
 				BB8486732C34C04B006F1FC9 /* LocationImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BB70F7682C63F62E00DF3518 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BBCBA8DE2C35BF7900DE08BE /* ProgressLoadingView.swift */,
+				BBCBA8E02C35CCA500DE08BE /* RatingCircleView.swift */,
+				BB14B6B72C63F282009C8614 /* EmptyStateView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		BB84866F2C3468CE006F1FC9 /* NearbyLocation */ = {
@@ -182,16 +189,6 @@
 				BB778E752C36A45600E358E8 /* WebViewLocation.swift */,
 			);
 			path = WebViews;
-			sourceTree = "<group>";
-		};
-		BBCBA8DD2C35BF4600DE08BE /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				BBCBA8DE2C35BF7900DE08BE /* ProgressLoadingView.swift */,
-				BBCBA8E02C35CCA500DE08BE /* RatingCircleView.swift */,
-				BB14B6B72C63F282009C8614 /* EmptyStateView.swift */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		BBCBA8E42C369A5700DE08BE /* FindLocation */ = {
@@ -268,7 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB14B6BA2C63F460009C8614 /* Animation - 1723055284129.json in Resources */,
+				BB14B6BA2C63F460009C8614 /* empty.json in Resources */,
 				BB7EF8D62C3C0FB000E03786 /* search.json in Resources */,
 				BB6FEA192C32D5C7006299D2 /* Preview Assets.xcassets in Resources */,
 				BB6FEA162C32D5C7006299D2 /* Assets.xcassets in Resources */,
@@ -291,7 +288,6 @@
 				BB84866A2C331E05006F1FC9 /* LocationManager.swift in Sources */,
 				BB8486612C32EBAB006F1FC9 /* LocationViewModel.swift in Sources */,
 				BB778E7B2C36D56A00E358E8 /* LocationSearchView.swift in Sources */,
-				BB8486642C330BDB006F1FC9 /* PickLocationView.swift in Sources */,
 				BB84866C2C3445C4006F1FC9 /* LocationDetailsModel.swift in Sources */,
 				BB8486742C34C04B006F1FC9 /* LocationImageModel.swift in Sources */,
 				BB6FEA122C32D5C5006299D2 /* TripsApp.swift in Sources */,

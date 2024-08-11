@@ -40,6 +40,8 @@ struct LocationView: View {
                 
       
                 }
+                
+                
      
                 if vm.isLoadingNearby {
                     ProgressLoadingView()

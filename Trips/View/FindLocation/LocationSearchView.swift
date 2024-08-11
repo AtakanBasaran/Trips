@@ -44,6 +44,10 @@ struct LocationSearchView: View {
                     vm.fetchSearchData(location: searchLocationText)
                 }
                 
+                if vm.locationSearchDetails.isEmpty {
+                    EmptyStateView()
+                }
+                
                 
                 if vm.isLoadingSearch {
                     ProgressLoadingView()
